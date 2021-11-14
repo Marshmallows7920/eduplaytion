@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<title>Eduplaytion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script>
+
+  $(".meter > span").each(function () {
+    $(this)
+      .data("origWidth", $(this).width())
+      .width(0)
+      .animate(
+        {
+          width: $(this).data("origWidth")
+        },
+        1200
+      );
+  });
+  
+  </script>
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('brick.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.meter {
+  box-sizing: content-box;
+  height: 20px; /* Can be anything */
+  position: relative;
+  margin: 60px 0 20px 0; /* Just for demo spacing */
+  background: #555;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(43, 194, 83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43, 194, 83) 37%,
+    rgb(84, 240, 84) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+.meter > span:after,
+.animate > span > span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+.animate > span:after {
+  display: none;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.orange > span {
+  background-image: linear-gradient(#f1a165, #f36d0a);
+}
+
+.red > span {
+  background-image: linear-gradient(#f0a3a3, #f42323);
+}
+
+.nostripes > span > span,
+.nostripes > span::after {
+  background-image: none;
+}
+
+#page-wrap {
+  width: 490px;
+  margin: 80px auto;
+}
+
+pre {
+  background: #000;
+  text-align: left;
+  padding: 20px;
+  margin: 0 auto 30px;
+}
+* {
+  box-sizing: border-box;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Eduplaytion
+  </div>
+  <div class="w3-display-middle">
+    <h3 class="w3-animate-opacity">1 Required Quest<br />
+      1 Optional Quest Unlocked!</h1>
+    <h3 class="w3-animate-opacity"></h1>
+      <p><strong>[Q] R: They have to do some extra practice</strong></p>
+      <p style="color:pink;"><strong style="color: white;">[Q] They have to attend a study session with either peers or meet with teaching assistant and go over their test</strong> (SELECTED)</p>
+      <p><em>Students at this level can give 10% xp to students in their peer group or if they get tutored by a higher leveled student</em></p>
+      
+    <h2 class="w3-animate-opacity" style="text-align: center;"><a href="student25.html"><button style="background-color: aqua; font-size: small;"> Continue </button></a></h2>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <div class="meter animate">
+      <span style="width: 75%"><span></span></span> <p><strong>LEVEL 2</strong></p>
+    </div>
+    <p class="w3-large w3-center"><a href="demo.html">  start over </a></p>
+  </div>
+</div>
+
+</body>
+</html>
